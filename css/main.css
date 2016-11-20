@@ -441,39 +441,51 @@ figure {
 
 @media screen and (max-width: 768px) {
 
+	/*I'm indenting the media queries so I can tell where the heck I'm at in my code*/
+	
+	/*--------------------------------------------------------------
+	768px 1.0 - TYPOGRAPHY
+	-------------------------------------------------------------- */		
+	body {
+		font-size: 17px;
+	}
+	/*--------------------------------------------------------------
+	768px 2.0 - NAVIGATION
+	-------------------------------------------------------------- */
+	header nav {
+		width: 70%;
+	}
+	
+	header nav li {
+		padding: 0;
+	}
 
-body {
-	font-size: 18px;
-}
+	/*--------------------------------------------------------------
+	768px 3.0 - STRUCTURE
+	-------------------------------------------------------------- */
+	.col-1-4 {
+		width: 50%;
+	}
 
-#hero nav {
-	width: 70%;
-}
+	#map {
+		height: 300px;
+	}
 
-#hero nav li {
-	padding: 0;
-}
-
-.col-1-4 {
-	width: 50%;
-}
-
-#services .col-1-4:nth-child(2) {
-	padding-right: 0;
-	padding-bottom: 20px;
-}
-
-/*why isn't this working?*/
-
-
-footer .col-1-2 {
-	width: 100%;
-}
-
-footer section .row .col-1-2 p, footer section.col-1-2 dl {
-	display: inline-block;
-	text-align: left;
-}
+	footer>.wrapper>.row>.col-1-2 {
+		width: 100%;
+	}
+	
+	footer dd {
+		display: block;
+		margin-left: 0;
+	} /*why isn't this working?*/
+	
+	/*
+	#services .col-1-4:nth-child(2) {
+		padding-right: 0;
+		padding-bottom: 20px;
+	}	why isn't this working?*/
+		
 
 
 }
@@ -483,4 +495,58 @@ footer section .row .col-1-2 p, footer section.col-1-2 dl {
 
 @media screen and (max-width: 480px) {
 	
+	/*--------------------------------------------------------------
+	480px 1.0 - TYPOGRAPHY
+	-------------------------------------------------------------- */		
+	
+	/*--------------------------------------------------------------
+	480px 2.0 - NAVIGATION
+	-------------------------------------------------------------- */	
+	header .col-1-6 {
+		width: 33%;
+		margin-top: 20px
+	}
+	
+	header nav {
+		width: 50%;
+	}
+	
+	header nav ul {
+		margin-top: 0;
+	}
+	
+	header nav li {
+		margin-bottom: 8px;
+	}
+	/*--------------------------------------------------------------
+	480px 3.0 - STRUCTURE
+	-------------------------------------------------------------- */	
+	#hero .col-1-2 {
+		width: 100%;
+		padding: 20px;
+	}
+	
+	section.col-1-4 {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 20px;
+	}
+	
+	footer section.col-1-2>.row>.col-1-2 {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+		padding: 0;
+		width: 100%;
+	}
+	
+	footer dt, footer dd {
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	form .col-1-2 {
+		width: 100%;
+		padding-bottom: 20px;
+	}
 }

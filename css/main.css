@@ -34,9 +34,22 @@
 html {
 	font-size: 14px;
 }
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	color: white;
+}
+
+form a, footer span {
+	font-weight: 600;
+}
+
+footer a {
+	color: inherit;
+}
+
+address {
+	font-style: normal;
 }
 /*--------------------------------------------------------------
 1.1 - BODY
@@ -130,7 +143,6 @@ form a {
 	color: white;
 	text-decoration: none;
 	display:inline-block;
-	font-weight: 600;
 }
 
 form a:hover {
@@ -141,16 +153,13 @@ form a:hover {
 /*--------------------------------------------------------------
 1.5 - LISTS
 -------------------------------------------------------------- */
-dt, dd {
-	display: inline-block
-}
-dt {
-	font-weight:100;
-	width: 20px;
+ul {
+	padding: 0;
 }
 
-dd {
-	font-weight: 600;
+li {
+	list-style-type: none;
+	font-weight:100;
 }
 /*--------------------------------------------------------------
 2.0 - MAIN MENU
@@ -176,8 +185,6 @@ nav a {
 nav a:hover {
 	background-color: rgba(255,255,255,.5);
 }
-
-
 
 /*--------------------------------------------------------------
 3.0 - SITE STRUCTURE
@@ -441,52 +448,43 @@ figure {
 
 @media screen and (max-width: 768px) {
 
-	/*I'm indenting the media queries so I can tell where the heck I'm at in my code*/
 	
-	/*--------------------------------------------------------------
-	768px 1.0 - TYPOGRAPHY
-	-------------------------------------------------------------- */		
-	body {
-		font-size: 17px;
-	}
-	/*--------------------------------------------------------------
-	768px 2.0 - NAVIGATION
-	-------------------------------------------------------------- */
-	header nav {
-		width: 70%;
-	}
-	
-	header nav li {
-		padding: 0;
-	}
+/*--------------------------------------------------------------
+768px 1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */		
+body {
+	font-size: 17px;
+}
+/*--------------------------------------------------------------
+768px 2.0 - NAVIGATION
+-------------------------------------------------------------- */
+nav.col-3-5 {
+	width: 70%;
+}
 
-	/*--------------------------------------------------------------
-	768px 3.0 - STRUCTURE
-	-------------------------------------------------------------- */
-	.col-1-4 {
-		width: 50%;
-	}
+header nav li {
+	padding: 0;
+}
 
-	#map {
-		height: 300px;
-	}
+/*--------------------------------------------------------------
+768px 3.0 - STRUCTURE
+-------------------------------------------------------------- */
+.wrapper {
+	width: 90%;
+}
 
-	footer>.wrapper>.row>.col-1-2 {
-		width: 100%;
-	}
-	
-	footer dd {
-		display: block;
-		margin-left: 0;
-	} /*why isn't this working?*/
-	
-	/*
-	#services .col-1-4:nth-child(2) {
-		padding-right: 0;
-		padding-bottom: 20px;
-	}	why isn't this working?*/
-		
+.col-1-4 {
+	width: 50%;
+	margin-bottom: 2rem;
+}
 
+.col-1-4:last-child {
+	padding-right: 28px;
+}
+
+footer>.wrapper>.row>.col-1-2 {
+	width: 100%;
+}
 
 }
 
@@ -495,58 +493,73 @@ figure {
 
 @media screen and (max-width: 480px) {
 	
-	/*--------------------------------------------------------------
-	480px 1.0 - TYPOGRAPHY
-	-------------------------------------------------------------- */		
+/*--------------------------------------------------------------
+480px 1.0 - TYPOGRAPHY
+-------------------------------------------------------------- */		
+h1, #hero nav ul {
+	margin-top: 0;
+}
+
+footer li {
+	margin-bottom: 10px;
+}
+/*--------------------------------------------------------------
+480px 2.0 - NAVIGATION
+-------------------------------------------------------------- */	
+#hero .col-1-6, #hero nav {
+	float: none;
+	margin: 0 auto;
+}
+
+#hero .col-1-6 {
+	margin-top: 20px;
+}
+
+#hero nav {
+	text-align: center;
+}
+/*--------------------------------------------------------------
+480px 3.0 - STRUCTURE
+-------------------------------------------------------------- */	
+#hero nav, .col-1-2, .col-1-4 {
+	width: 100%;
+}
+
+#hero .col-1-6, footer .col-1-2.row div, footer .col-1-2.row ul {
+	width: 50%;
+}
+
+#hero .col-1-2 {
+	padding: 20px;	
+}
+
+.col-1-4, .col-1-4:last-child {
+	padding-right: 0;
+}
+
+form.row {
+	padding: 0;
+}
+
+form .col-1-2 {
+	padding: 0 0 20px 0;
+}
+
+form .col-1, footer .col-1-2.row {
+	padding-right: 0 !important;
+}
+
+footer .col-1-2.row div {
+	float: left;
+	padding-right: 20px;
+}
+
+footer .col-1-2.row ul {
+	float: right;
+}
+
+#map {
+	margin-top: 2rem;
+}
 	
-	/*--------------------------------------------------------------
-	480px 2.0 - NAVIGATION
-	-------------------------------------------------------------- */	
-	header .col-1-6 {
-		width: 33%;
-		margin-top: 20px
-	}
-	
-	header nav {
-		width: 50%;
-	}
-	
-	header nav ul {
-		margin-top: 0;
-	}
-	
-	header nav li {
-		margin-bottom: 8px;
-	}
-	/*--------------------------------------------------------------
-	480px 3.0 - STRUCTURE
-	-------------------------------------------------------------- */	
-	#hero .col-1-2 {
-		width: 100%;
-		padding: 20px;
-	}
-	
-	section.col-1-4 {
-		width: 100%;
-		padding: 0;
-		margin-bottom: 20px;
-	}
-	
-	footer section.col-1-2>.row>.col-1-2 {
-		float: none;
-		margin: 0 auto;
-		text-align: center;
-		padding: 0;
-		width: 100%;
-	}
-	
-	footer dt, footer dd {
-		margin: 0 auto;
-		width: 100%;
-	}
-	
-	form .col-1-2 {
-		width: 100%;
-		padding-bottom: 20px;
-	}
 }
